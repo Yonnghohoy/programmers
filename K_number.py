@@ -1,7 +1,7 @@
 def solution(array, commands):
-    answer=''
+    answer=[]
     for elem in commands:
-        tmp = array[elem[0]:elem[5+1]]
+        tmp = array[elem[0]-1:elem[1]]
         tmp.sort()
-        answer+=tmp[elem[2]]
+        answer.append(tmp[elem[2]-1])
     return answer

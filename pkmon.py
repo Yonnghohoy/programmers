@@ -3,8 +3,8 @@ def solution(nums):
     
     _nums = set(nums)
     numbers = len(nums)/2
-    if len(_nums) >=numbers :
-        answer =len(_nums)
+    if len(_nums) >= numbers :
+        answer = numbers
     elif len(_nums) < numbers :
-        answer =len(nums)
+        answer = len(_nums)
     return answer

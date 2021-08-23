@@ -1,13 +1,12 @@
-from math import gcd, lcm
+def gcd(n1, n2):
+    if n1 < n2:
+        (n1, n2) = (n2, n1)
 
-def gcd(x,y):
-    while y:
-        x,y = y, x%y
-    return x
+    while n2 != 0:
+        (n1, n2) = (n2, n1 % n2)
+
+    return n1
+
 
 def solution(n, m):
-    answer = []
-    for i in range(len(n)):
-        answer.append(gcd(n,m))
-        answer.append(lcm(n,m))
-    return answer
+    return [gcd(n, m), (n * m) / gcd(n,m)]

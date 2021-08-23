@@ -12,4 +12,3 @@ def solution(s):
             
             
     return ' '.join(se_answer)
-print(solution("try hello world"))

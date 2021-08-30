@@ -10,7 +10,7 @@ def solution (n, stages):
             lst[i] = 0
             
     
-    arr = sorted(list(lst.keys()))
+    arr = sorted(lst, key = lambda x: lst[x], reverse=True)
     
     return arr
 
